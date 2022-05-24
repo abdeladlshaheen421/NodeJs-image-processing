@@ -10,4 +10,4 @@
 ---
 1. `/`
 2. `/images`
-3. `/images?name=..&width=..&height=..
+3. `/images?name=..&width=..&height=..`
