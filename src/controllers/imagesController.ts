@@ -1,6 +1,9 @@
 import validation from './validationController'
 import express from 'express'
-const createThumbnail = async (req: express.Request, res: express.Response) => {
+const createThumbnail = async (
+  req: express.Request,
+  res: express.Response
+): Promise<unknown> => {
   if (!validation.definedParam(req.query.name)) {
     return res.status(200).json({ Fail: 'Image name is not defined' })
   }

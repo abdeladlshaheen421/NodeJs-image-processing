@@ -27,4 +27,7 @@ describe('test required function to validate inputs', (): void => {
   it('when image is exist', () => {
     expect(validation.isImage('wonder1')).toBeTruthy()
   })
+  it('test createThumnail', () => {
+    expect(validation.createThumnail('wonder1', 400, 400)).toBeTruthy()
+  })
 })

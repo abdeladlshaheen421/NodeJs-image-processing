@@ -10,12 +10,12 @@ app.listen(process.env.PORT || 8080, (): void =>
 
 app.use(imageRouter)
 
-app.get('/', (req, res): void => {
-  res.status(200).json({ welcome: 'Welcome to root page' })
+app.get('/', (req, res): express.Response => {
+  return res.status(200).json({ welcome: 'Welcome to root page' })
 })
 
-app.use((req, res): void => {
-  res.status(404).json({ message: 'page not found' })
+app.use((req, res): express.Response => {
+  return res.status(404).json({ message: 'page not found' })
 })
 
 export default app
