@@ -4,17 +4,17 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 const app = express()
 
-app.listen(process.env.PORT || 8080, () =>
+app.listen(process.env.PORT || 8080, (): void =>
   console.log(`Server is Listening on : http://localhost:${process.env.PORT}`)
 )
 
 app.use(imageRouter)
 
-app.get('/', (req, res) => {
+app.get('/', (req, res): void => {
   res.status(200).json({ welcome: 'Welcome to root page' })
 })
 
-app.use((req, res) => {
+app.use((req, res): void => {
   res.status(404).json({ message: 'page not found' })
 })
 
